@@ -133,12 +133,6 @@ export default class adminViewApplication extends Component {
     return Math.floor(Math.random() * max - min + 1) + min;
   }
 
-  onDelete=(id)=>{
-    axios.delete(`/application/delete/${id}`).then((res)=>{
-      window.location.replace('/applications');
-    })
-  }
-
   render() {
     return (
       <div style={{ marginLeft: 100 }}>
