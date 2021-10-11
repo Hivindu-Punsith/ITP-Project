@@ -67,6 +67,10 @@ const lecturerSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    Ltype:{
+        type:String,
+        required:true
+    },
 
     salary:{
         type:String,

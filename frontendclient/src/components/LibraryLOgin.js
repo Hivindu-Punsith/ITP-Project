@@ -39,7 +39,7 @@ export default class Login extends Component {
         })
 
     }else{
-        alert("cant access because your token is not vaild or contact us our members ")
+        alert("Please Check Your Username and Password")
     }
   }
     render() {

@@ -10,7 +10,7 @@ router.get('/',(req,res)=>{
 });
 
 // add new data 
-router.post('/add',(req,res)=>{
+router.post('/addborrow',(req,res)=>{
     const newBorrow = new Borrow ({
         NIC:req.body.NIC,
         Book_Name:req.body.Book_Name,

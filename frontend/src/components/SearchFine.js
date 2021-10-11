@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect,useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const SearchFine = (props) => {
 
@@ -22,7 +23,16 @@ const SearchFine = (props) => {
     },[props]);
     return (
         <div>
-             <div className="container">
+              <div
+        className="container border"
+        style={{
+          marginTop: "50px",
+          width: "100%",
+          backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9QXZMet9OUNTyqEvHbHqMoTUlsaRtNK9iGA&usqp=CAU')`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
               <br></br>
              
           <table className="table">
@@ -50,6 +60,9 @@ const SearchFine = (props) => {
                      </tbody>
                      </table>
      
+                     <center>
+<Link to="/libraryhome" className="btn btn-primary">Back</Link>
+</center>
         </div>
 
         </div>

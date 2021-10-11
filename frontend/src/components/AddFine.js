@@ -29,7 +29,16 @@ const AddFine = () => {
 };
   return (
         <AddFinesContainer>
-          <div className="container">
+                <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "50%",
+        backgroundImage: `url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
             <center>
 
               <h1>Add a New Fine</h1>
@@ -38,28 +47,28 @@ const AddFine = () => {
   <div className="form-row">
 
     <div className="form-group col-md-6">
-    <label htmlfor="NIC">NIC</label>
+    <label htmlfor="NIC">NIC</label><br/>
     <input type="text" 
     onChange={f => setNIC(f.target.value)}
     className="form-control"  
-    placeholder="NIC"/>
+    placeholder="NIC" required/>
     </div>
 
 
     <div className="form-group col-md-6">
-      <label htmlfor="Book_Name">Book Name</label>
+      <label htmlfor="Book_Name">Book Name</label><br/>
       <input type="text" 
       onChange={f=> setBook_Name(f.target.value)}
       className="form-control" 
-      placeholder="Name of The Book " />
+      placeholder="Name of The Book " required/>
       </div>
     
       <div className="form-group col-md-6">
-      <label htmlfor="setAuthor">Author</label>
+      <label htmlfor="setAuthor">Author</label><br/>
       <input type="text" 
       onChange={f=> setAuthor(f.target.value)}
       className="form-control" 
-      placeholder="Author" />
+      placeholder="Author" required/>
       </div>
   </div>
 
@@ -71,11 +80,11 @@ const AddFine = () => {
     </div>
 
   <div className="form-group col-md-6">
-    <label htmlfor="Fines">Fines</label>
+    <label htmlfor="Fines">Fines</label><br/>
     <input type="text"
     onChange={f=>setFines(f.target.value)} 
     className="form-control"  
-    placeholder="Fines" />
+    placeholder="Fines" required/>
   </div>
 
  <br/>

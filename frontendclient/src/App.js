@@ -52,7 +52,8 @@ import LibraryHome from './components/Library';
 import AddApllicant from './components/AddApplicant';
 import AddBooks from './components/AddBook';
 import LibraryLOgin from './components/LibraryLOgin';
-
+import BorrowApp from './components/BorrowApp';
+import Fine from "./components/AllFine";
 
 
 function App() {
@@ -84,7 +85,22 @@ useEffect(()=>{
   .catch(error => console.log(error));
 },[])
 
+const[Borrow,setBorrow] = useState([])
+useEffect(()=>{
 
+  axios.get('http://localhost:8000/borrow')
+  .then(res=>setBorrow(res.data))
+  .catch(error=>console.log(error));
+},[])
+
+const [PayFines, setPayFines] = useState([])
+
+useEffect(()=>{
+
+  axios.get('http://localhost:8000/fines') 
+  .then(res =>setPayFines(res.data))
+  .catch(error => console.log(error));
+},[])
   return (
     <BrowserRouter>
       <div>
@@ -143,12 +159,14 @@ useEffect(()=>{
         <Route path="/libhome"  component={LibraryHome}></Route>
         <Route path="/AddApplicant" component={AddApllicant}/>
         <Route path="/books" render={() => <AddBooks books={books}/>} />
-      
+        <Route path="/borrow" render={()=><BorrowApp Borrow={Borrow}/>}/>
+        <Route path="/Fines" render={() => <Fine PayFines={PayFines}/>}/>
 
         <Route path="" component={Homefooter}></Route>
       </div>
     </BrowserRouter>
   );
 }
+
 
 export default App;

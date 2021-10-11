@@ -26,7 +26,14 @@ const addBookSchema = new Schema({
     No_of_Copies:{
         type:String,
         require:true
-    }
+    },
+
+    BookImage:{
+        type:String,
+       
+    },
+    postdata:{type:Date, default:Date.now}
+
 })
 
 const AddBook = mongoose.model("AddBook",addBookSchema);

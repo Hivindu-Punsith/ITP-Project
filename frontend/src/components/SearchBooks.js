@@ -23,7 +23,16 @@ useEffect(()=>{
 },[props]);
 
     return (
-        <div className="container">
+        <div
+        className="container border"
+        style={{
+          marginTop: "50px",
+          width: "100%",
+          backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9QXZMet9OUNTyqEvHbHqMoTUlsaRtNK9iGA&usqp=CAU')`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
             <br/>
                       <table className="table">
           <thead>
@@ -55,7 +64,7 @@ useEffect(()=>{
 </table>
 <br/><br/>
 <center>
-<Link to="/add-book" className="btn btn-primary">Back</Link>
+<Link to="/libraryhome" className="btn btn-primary">Back</Link>
 </center>
         </div>
     )

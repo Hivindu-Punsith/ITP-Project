@@ -22,6 +22,7 @@ export default class addLecturer extends Component {
             summary: "",
             aQualification: "",
             Rmembership: "",
+            Ltype: "",
             salary: "",
             Rdate: ""
         }
@@ -39,7 +40,7 @@ export default class addLecturer extends Component {
     }
     onsubmit = (e) => {
         e.preventDefault();
-        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, salary, Rdate } = this.state;
+        const { lecId, lecFname, lecLname, nic, dob, email, cNumber, address, username, password, summary, aQualification, Rmembership, Ltype, salary, Rdate } = this.state;
         const data = {
             lecId: lecId,
             lecFname: lecFname,
@@ -54,6 +55,7 @@ export default class addLecturer extends Component {
             summary: summary,
             aQualification: aQualification,
             Rmembership: Rmembership,
+            Ltype: Ltype,
             salary: salary,
             Rdate: Rdate
         }
@@ -75,6 +77,7 @@ export default class addLecturer extends Component {
                     summary: "",
                     aQualification: "",
                     Rmembership: "",
+                    Ltype: '',
                     salary: "",
                     Rdate: ""
 
@@ -89,7 +92,8 @@ export default class addLecturer extends Component {
                 summary: "Renowned academic and researcher in Plant Biotechnology. After graduating from faculty of Agriculture, University of Peradeniya, Sri Lanka, I completed the M.Sc Degree in Pennsylvania State University, USA, and Ph.D. in University of London, UK. I started my career at Faculty of Agriculture University of Peradeniya, Sri Lanka as a Lecturer in Department of Crop Science and promoted to senior Lecturer, Associate Professor, Professor and Senior Professor during my 30 years of service",
                 aQualification: "M.Sc. (Agronomy), The Pennsylvania State University,  USA, 1986 B.Sc. (Agriculture), University of Peradeniya, Sri Lanka, 1978",
                 Rmembership: "Main Committee Member 2017 to date, Committee on Equating and or Validating of Certificates of Diplomas and Degree (CVECD), National Apprentice & Industrial Training Authority, Sri Lanka",
-                salary: "80000",
+                Ltype:"Senior lecturer",
+                salary: "70000"
             })
     }
 
@@ -129,20 +133,20 @@ export default class addLecturer extends Component {
                     border: '1px solid black',
                     marginRight: '280px',
                     marginLeft: '290px',
-                    background:'#F5F5F5'
+                    background: '#F5F5F5'
                 }}
             >
                 <div className="container" >
                     <br></br>
                     <center>
-                    
+
                         <h3><b>Add New Lecturer Details</b></h3><br></br>
                         <img src={addnew} style={{ width: '500px', height: 'auto' }}></img>
                         <br></br>
                         <br></br>
                         <h6><p>On this page add new lecturer details to the institute database. In here lecturer ID is auto generating. By viewing the curriculum vitae fill the summary, academic qualifications and Research interests and memberships</p></h6>
                         <br></br>
-                        </center>
+                    </center>
 
                     <form className="needs-validation" onSubmit={this.onsubmit}>
 
@@ -215,6 +219,22 @@ export default class addLecturer extends Component {
                             <textarea className="form-control" name="Rmembership" cols="25" rows="5" value={this.state.Rmembership} onChange={this.handleInputChange} required ></textarea>
                         </div><br />
 
+                        <div className="col-md-12">
+                            <label className="form-label"><b>Lecturer Type</b></label>
+                            <select className="form-control"
+                                name="Ltype"
+                                value={this.state.Ltype}
+                                onChange={this.handleInputChange}
+                                required >
+                                <option selected disabled value="">Select</option>
+                                <option>Assistant Lecturer</option>
+                                <option>Senior Lecturer</option>
+                                <option>Master Lecturer</option>
+
+                            </select>
+                        </div><br />
+                        <p>* Enter the basic salary as the type of the lecturer <br></br>
+                        </p>
                         <div className="col-md-12">
                             <label className="form-label"><b>Basic Salary</b></label>
                             <input className="form-control" name="salary" value={this.state.salary} onChange={this.handleInputChange} required />

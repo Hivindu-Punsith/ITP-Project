@@ -51,6 +51,13 @@ const LibraryAdmin = () => {
                     </td>
                     </tr>
 
+                    <tr>
+                    <td>
+                    <a href='/AllBorrow'><img src={Borrow} style={{width:200 , marginTop:'40px', marginLeft:'40px', marginRight:'40px'}}></img></a><br/>
+                    <center><a className="btn btn-outline-success" style={{marginTop:'20px'}} href='/AllBorrow'>&nbsp;All Borrowed Books&nbsp;</a></center>
+                    </td>
+                    </tr>
+
 </table></center>
     </div>
  </div>

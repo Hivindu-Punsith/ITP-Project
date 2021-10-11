@@ -14,6 +14,7 @@ const EditMembers = props => {
    
     
     const changeOnClick = e=>{
+         
 
         const members={
             NIC,
@@ -53,7 +54,17 @@ const EditMembers = props => {
     return (
         <div>
               <EditMemberContainer>
-        <div className="container">
+              <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "50%",
+        backgroundImage: `url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+    
           <center> 
               <h1>Update Member </h1>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
@@ -75,7 +86,7 @@ const EditMembers = props => {
             <br/>
 
           <div className="form-group col-md-6">
-            <label htmlFor="First_Name ">First Name</label>
+            <label htmlFor="First_Name ">First Name</label><br/>
             <input type="text"
              onChange={e => setFirst_Name(e.target.value)}
              value={First_Name}
@@ -87,7 +98,7 @@ const EditMembers = props => {
             <br/>
 
         <div className="form-group col-md-6">
-            <label htmlFor="Last_Name">Last Name</label>
+            <label htmlFor="Last_Name">Last Name</label><br/>
             <input type="text"
             onChange={e => setLastName(e.target.value)} 
             value={Last_Name}
@@ -98,7 +109,7 @@ const EditMembers = props => {
           <br/>
 
           <div className="form-group col-md-6">
-            <label htmlFor="Address">Address</label>
+            <label htmlFor="Address">Address</label><br/>
             <input type="text"
             onChange={e => setAddress(e.target.value)} 
             value={Address}
@@ -109,7 +120,7 @@ const EditMembers = props => {
           <br/>
 
           <div className="form-group col-md-6">
-            <label htmlFor="Email">Email</label>
+            <label htmlFor="Email">Email</label><br/>
             <input type="text"
             onChange={e => SetEmail(e.target.value)} 
             value={Email}
@@ -152,7 +163,7 @@ export default EditMembers
 const EditMemberContainer = styled.div`
      
 h1{
-     font-wight: 1000;
+     font-wight: 12000;
      color :var(--blue);
 }
 .btn-primary{

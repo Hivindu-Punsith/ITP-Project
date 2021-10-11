@@ -30,8 +30,17 @@ const AddApllicant = () => {
         });
     };
     return (
-        <div>
-            <div className="container">
+        <div> 
+            <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "50%",
+        backgroundImage: `url('https://lh3.googleusercontent.com/proxy/eJ7M7eoOpM9jWd13lGAD8GDDjUPrbnKk_ORCo6dKklC6YOgogoAWzybAMjr4ox6569pctppQEypxxsLc9VMI0-JqGNUys_WbgnT3')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
           <center> 
               <h1>Become a Member of The Library</h1>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
@@ -83,8 +92,8 @@ const AddApllicant = () => {
           <br/>
 
           <div className="form-group col-md-6">
-            <label htmlFor="Email">Email</label>
-            <input type="text"
+            <label htmlFor="Email">Email</label><br/>
+            <input type="email"
             onChange={e => SetEmail(e.target.value)} 
             className="form-control"  
             placeholder="ABC@gmail.com" />

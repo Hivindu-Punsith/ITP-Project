@@ -5,7 +5,6 @@ import welcome from './LibraryImages/welcome.gif'
 import Laws from './LibraryImages/laws.jpg'
 import Fine from './LibraryImages/fines.jpg'
 
-
 export default class Library extends Component{
     render(){
         return(
@@ -77,7 +76,7 @@ export default class Library extends Component{
                                 <td style={{ color: 'white', textAlign: 'center' }}>
                                     <h3 style={{ marginLeft: '30px' }}><b>Return the books on time</b></h3>
                                     <p style={{ marginLeft: '30px' }}>Click below to check the members list with fines</p>
-                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }} href='/allsubjects'>Click Here...</a>
+                                    <a className="btn btn-outline-light btn-lg" style={{ width: '200px', marginLeft: '30px' }} href='/Fines'>Click Here...</a>
                                 </td>
                                 <td style={{ textAlign: 'right' }}>
                                     <img src={Fine} style={{ width: '400px', height: '400px' }} />
@@ -85,6 +84,7 @@ export default class Library extends Component{
                             </tr>
                         </table>
                     </div><br />
+                   
 
                 </div>
             </div>

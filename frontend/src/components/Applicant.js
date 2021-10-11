@@ -13,12 +13,23 @@ const deteleApplicant = id =>{
 }
     return (
         <div>
-             <div className="container">
+                         <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "100%",
+        backgroundImage: `url('https://images6.alphacoders.com/376/376033.jpg')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      
               <br></br>
               <h1>All Applicants</h1>
           <table className="table">
           <thead>
-<tr>
+<tr className="text-info bg-dark">
+
   <th scopse="col">#</th>
   <th scopse="col">NIC</th>
   <th scopse="col">First Name</th>
@@ -44,9 +55,9 @@ const deteleApplicant = id =>{
                       <Link to ={{
         pathname:`/addtolibray/${Applicants._id}`
       }}>
-       <button type="button" class="btn btn-success" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>Accept</button>&nbsp;
+       <button type="button" class="btn btn-success" style={{marginTop:'10px'}} > <i class="fas fa-user-check"></i>Accept</button>&nbsp;
     </Link>
-    <button onClick={()=>deteleApplicant(Applicants._id)}deteleApplicant type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;Delete </button>
+    <button onClick={()=>deteleApplicant(Applicants._id)}deteleApplicant type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-user-slash"></i>&nbsp;Reject </button>
 </td>
 
 

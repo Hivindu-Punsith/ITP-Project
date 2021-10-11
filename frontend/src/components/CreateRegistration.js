@@ -154,6 +154,7 @@ const CreateRegistration = (props) => {
                 placeholder="xxxxxxxxxV"
                 pattern="^[0-9]{9}[vVxX]$"
                 maxLength="10"
+                title="Must contain letter V at last"
 
               />
             </div>

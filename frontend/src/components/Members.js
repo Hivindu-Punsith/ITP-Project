@@ -16,12 +16,21 @@ const Members = ({Member}) => {
 
     return (
         <div>
-              <div className="container">
+                    <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "100%",
+        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9QXZMet9OUNTyqEvHbHqMoTUlsaRtNK9iGA&usqp=CAU')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
               <br></br>
-              <h1>All Applicants</h1>
+              <h1>All Libarary Members</h1>
           <table className="table">
           <thead>
-<tr>
+<tr className="text-info bg-dark">
   <th scopse="col">#</th>
   <th scopse="col">NIC</th>
   <th scopse="col">First Name</th>
@@ -47,10 +56,10 @@ const Members = ({Member}) => {
                       <Link to ={{
         pathname:`/updateMember/${Members._id}`
       }}>
-       <button type="button" className="btn btn-success" style={{marginTop:'10px'}} > <i className="fas fa-search"></i>Update</button>&nbsp;
+       <button type="button" className="btn btn-success" style={{marginTop:'10px'}} > <i className="fas fa-pencil-alt"></i>&nbsp;Update</button>&nbsp;
     </Link>
   
-    <button onClick={()=>deteleMember(Members._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;Delete </button>
+    <button onClick={()=>deteleMember(Members._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="far fa-trash-alt"></i>&nbsp;Delete </button>
  
     
     

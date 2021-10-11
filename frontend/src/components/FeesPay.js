@@ -205,11 +205,11 @@ export default class FeesPay extends Component {
                     </div>
 
                     <div className="form-group" style={{ marginBottom: '15px' }}>
-                        <label style={{ marginBottom: '15px' }}>CVC</label>
+                        <label style={{ marginBottom: '15px' }}>CVV</label>
                         <input type="text"
                             className="form-control"
                             name="cvc"
-                            placeholder="CVC"
+                            placeholder="CVV"
                             value={this.state.cvc}
                             onChange={this.handleInputChange} required />
                     </div>

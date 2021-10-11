@@ -1,7 +1,7 @@
 import React , {useState , useEffect}from 'react'
 import styled from'styled-components';
 import axios from 'axios';
-
+import { Link } from "react-router-dom";
 const AddLibraryMember = props => {
 
     const[NIC, setNIC] = useState("");
@@ -52,7 +52,17 @@ const AddLibraryMember = props => {
 
     return (
         <AddMemberContainer>
-        <div className="container">
+
+        <div
+      className="container border"
+      style={{
+        marginTop: "50px",
+        width: "50%",
+        backgroundImage: `url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg')`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
           <center> 
               <h1>Add New Member </h1>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
@@ -163,6 +173,10 @@ const AddLibraryMember = props => {
         <button type="submit" className="btn btn-primary">Enter</button>
         
       </form>
+     
+      <Link to="/Email" type="button" class="btn btn-success">
+            <i class="fas fa-arrow-circle-left"></i>&nbsp;Send Email
+          </Link>
     </center>
     
       </div>

@@ -34,6 +34,8 @@ export default class PostLecturer extends Component {
                     summary:res.data.lecturer.summary,
                     aQualification:res.data.lecturer.aQualification,
                     Rmembership:res.data.lecturer.Rmembership,
+                    Ltype:res.data.lecturer.Ltype,
+                    salary: res.data.lecturer.salary,
                     Rdate:res.data.lecturer.Rdate
                 });
 
@@ -53,7 +55,7 @@ export default class PostLecturer extends Component {
     
     render() {
 
-        const{lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,aQualification,Rmembership,Rdate} = this.state.lecturer;
+        const{lecId,lecFname,lecLname,nic,dob,email,cNumber,address,username,password,summary,Ltype,salary,aQualification,Rmembership,Rdate} = this.state.lecturer;
 
         return (
 
@@ -103,6 +105,12 @@ export default class PostLecturer extends Component {
 
                     <dt className="col-sm-3"><b>Research interests and memberships</b></dt>
                     <dd className="col-sm-9">{Rmembership}</dd>
+
+                    <dt className="col-sm-3"><b>Salary</b></dt>
+                    <dd className="col-sm-9">{salary}</dd>
+
+                    <dt className="col-sm-3"><b>Type of the lecturer</b></dt>
+                    <dd className="col-sm-9">{Ltype}</dd>
 
                     <dt className="col-sm-3"><b>Registration Date</b></dt>
                     <dd className="col-sm-9">{Rdate}</dd>

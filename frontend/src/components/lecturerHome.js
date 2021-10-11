@@ -54,7 +54,8 @@ filterDate(lecturers,searchKey){
   lec.aQualification.toLowerCase().includes(searchKey)||
   lec.Rmembership.toLowerCase().includes(searchKey)||
   lec.Rdate.toLowerCase().includes(searchKey)||
-  lec.salary.toLowerCase().includes(searchKey)
+  lec.salary.toLowerCase().includes(searchKey)||
+  lec.Ltype.toLowerCase().includes(searchKey)
   )
 
   this.setState({lecturers:result})
@@ -131,6 +132,7 @@ axios.get("/lecturers").then(res =>{
              <th scope="col">Career Summary</th>
              <th scope="col">Acedemic Qualifications</th>
              <th scope="col">Research interests and memberships</th>
+             <th scope="col">Lecturer Type</th>
              <th scope="col">Basic Salary</th>
              <th scope="col">Registration Date</th>
              <th scope="col">Action</th>
@@ -156,6 +158,7 @@ axios.get("/lecturers").then(res =>{
                 <td><b>{lecturer.summary}</b></td>
                 <td><b>{lecturer.aQualification}</b></td>
                 <td><b>{lecturer.Rmembership}</b></td>
+                <td><b>{lecturer.Ltype}</b></td>
                 <td><b>{lecturer.salary}</b></td>
                 <td><b>{lecturer.Rdate}</b></td>
                 <td>
